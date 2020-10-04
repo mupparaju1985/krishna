@@ -9,7 +9,7 @@ pipeline {
         }
         stage('merge') {
             steps {
-                sh 'git push origin main'
+                sh 'git pull origin main'
                 sh 'git checkout master'
                 sh 'git pull origin master'
                 sh 'git merge main'
